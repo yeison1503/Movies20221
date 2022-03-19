@@ -1,5 +1,6 @@
 package com.example.movies20221.ui.List
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -48,5 +49,4 @@ class MoviesAdapter (
             }
         }
     }
-
 }

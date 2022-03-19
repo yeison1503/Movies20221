@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
-import com.example.movies20221.R
 import com.example.movies20221.databinding.FragmentDetailBinding
 import com.example.movies20221.server.model.Movie
 import com.squareup.picasso.Picasso
@@ -22,7 +21,7 @@ class DetailFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         detailBinding = FragmentDetailBinding.inflate(inflater, container, false)
         detailviewModel = ViewModelProvider(this)[DetailViewModel::class.java]
@@ -41,5 +40,4 @@ class DetailFragment : Fragment() {
             Picasso.get().load("https://image.tmdb.org/t/p/w500"+movie.posterPath).into(posterImageView)
         }
     }
-
 }
